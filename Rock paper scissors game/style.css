@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #333;
+}
+p {
+  color: #fff;
+}
+h1 {
+  font-size: 35px;
+  color: #fff;
+  margin: 15px;
+}
+.com-phrase {
+  font-size: 18px;
+  padding: 5px;
+}
+.p {
+  font-size: 20px;
+  color: #fff;
+  margin: 10px;
+  /* transition: 3s ease-in; */
+}
+.button {
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  margin: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 107%;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(to bottom right, blue, #e100ff);
+}
+.clear {
+  border-radius: 50px;
+  font-size: 1.2rem;
+  padding: 10px;
+  position: relative;
+  border: none;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom right, blue, #e100ff);
+  height: 110%;
+  width: 105%;
+  border-radius: 50px;
+  z-index: -1;
+}
+.clear:hover {
+  background: linear-gradient(to bottom right, blue, #e100ff);
+  color: #f0f0f0;
+  box-shadow: -10px -10px 100px blue, 10px 10px 100px #e100ff;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .game-title {
+    font-size: 2rem;
+    margin: 10px;
+  }
+  .com-phrase {
+    font-size: 1rem;
+  }
+  .button {
+    font-size: 30px;
+    padding: 10px;
+  }
+  .button-div {
+    margin: 10px;
+  }
+  .p,
+  .js-score {
+    font-size: 1rem;
+  }
+  .clear {
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-title {
+    font-size: 1.7rem;
+  }
+  .com-phrase,
+  .p,
+  .js-score {
+    font-size: 0.9rem;
+  }
+  .button-div {
+    gap: 6;
+  }
+  .button {
+    margin: 10px;
+  }
+}
